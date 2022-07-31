@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-lue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+/*########body styling####*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--Very-dark-blue);
+}
+/*####* container styling start*/
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+    margin: 3% auto;
+    width: 100%;
+    
+}
+/*container styling end*/
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /*align-items: center;*/
+    justify-content: center;
+    
+}
+/*row styling start*/
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.33%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width:58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+/*row styling ends*/
+.text h1 {
+    color: var(--White);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+.text h1 span {
+    color: var(--Soft-violet);
+}
+.text p {
+    color: var(--Slightly-transparent-white);
+    font-size: 13px;
+    padding-top: 35px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    
+}
+.col-6 {
+    background-color: var(--Dark-desaturated-lue)
+}
+.box {
+    width: 100%;
+    padding: 20px;
+    padding-top: 15%;
+    padding-left: 10%;
+}
+.box2 {
+    display: flex;
+    padding-left: 10%;
+}
+.text1,
+.text2,
+.text3 {
+   width: 30%;
+   color: hsla(0, 0%, 100%, 0.6);
+   text-transform: uppercase;
+   padding-top: 50px;
+   
+}
+.text1 h4,
+.text2 h4,
+.text3 h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--White);
+}
+.text1 p,
+.text2 p,
+.text3 p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 10px;
+    padding-top: 5px;
+    color: var(--Slightly-transparent-white);
+}
+
+/*image styling*/
+.image {
+    position: relative;
+    max-width: fit-content;
+}
+
+.image::after {
+    z-index: 100;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--Soft-violet);
+    mix-blend-mode: color;
+}
+.image1 {
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .image1,
+    .mobimg {
+        display: block;
+        width: 100%;
+        margin: -5px auto;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .image {
+        display: none;
+    }
+    .col-6 {
+        width: 100%;
+        margin: auto; 
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        
+        
+    }
+    .text h1 {
+        font-size: 20px;
+    }
+    .text p {
+        font-size: 16px;
+        padding-top: 15px;
+    }
+    .box2 {
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: -8px;
+        margin-bottom: 30px;
+        max-width: 100%;
+    } 
+}
